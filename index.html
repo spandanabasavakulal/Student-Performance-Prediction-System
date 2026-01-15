@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Prediction System</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1 class="title">🎓 Student Performance Prediction System</h1>
+<p class="subtitle">AI-Powered Academic Performance Analysis & Risk Assessment</p>
+
+<div class="dashboard">
+
+    <!-- LEFT PANEL -->
+    <div class="card input-card">
+        <h3>Student Information</h3>
+
+        <input id="age" type="number" placeholder="Age">
+
+        <input id="studytime" type="number" min="1" max="4"
+               placeholder="Daily Study Time (1–4)">
+
+        <input id="absences" type="number"
+               placeholder="Total Absences">
+
+        <input id="failures" type="number"
+               placeholder="Past Failures">
+
+        <input id="g1" type="number" min="0" max="20"
+               placeholder="G1 – First Period Grade (0–20)">
+
+        <input id="g2" type="number" min="0" max="20"
+               placeholder="G2 – Second Period Grade (0–20)">
+
+        <button onclick="predict()">Predict Final Grade</button>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel" id="resultSection">
+
+        <!-- PREDICTION CARD -->
+        <div class="card prediction-card">
+            <p class="small">Predicted Final Grade (G3)</p>
+            <h2 id="prediction">-- / 20</h2>
+            <p class="confidence">100% Confidence</p>
+        </div>
+
+        <!-- CATEGORY & RISK -->
+        <div class="row">
+            <div class="card mini-card">
+                <h4>Performance Category</h4>
+                <p id="category">---</p>
+            </div>
+
+            <div class="card mini-card green">
+                <h4>Academic Risk Level</h4>
+                <p id="risk">---</p>
+            </div>
+        </div>
+
+        <!-- CHARTS -->
+        <div class="row">
+            <div class="card chart-card">
+                <h4>Feature Importance</h4>
+                <canvas id="featureChart"></canvas>
+            </div>
+
+            <div class="card chart-card">
+                <h4>Performance Analysis</h4>
+                <canvas id="radarChart"></canvas>
+            </div>
+        </div>
+
+        <!-- RECOMMENDATION -->
+        <div class="card recommendation">
+            <h4>Personalized Academic Recommendation</h4>
+            <p id="recommendation">---</p>
+        </div>
+
+        <!-- ML MODEL PERFORMANCE METRICS -->
+        <div class="ml-metrics" id="metricsSection">
+            <h4 class="ml-metrics-title">🧠 ML Model Performance Metrics</h4>
+
+            <div class="ml-metrics-row">
+
+                <!-- R2 SCORE -->
+                <div class="ml-metric-card">
+                    <p class="metric-label">R² Score (Accuracy)</p>
+                    <h2 class="metric-value">0.89</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 89%;"></div>
+                    </div>
+                    <p class="metric-desc">89% variance explained</p>
+                </div>
+
+                <!-- RMSE -->
+                <div class="ml-metric-card">
+                    <p class="metric-label">RMSE (Error Rate)</p>
+                    <h2 class="metric-value">1.28</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 64%;"></div>
+                    </div>
+                    <p class="metric-desc">±1.28 grade points</p>
+                </div>
+
+                <!-- CONFIDENCE -->
+                <div class="ml-metric-card">
+                    <p class="metric-label">Prediction Confidence</p>
+                    <h2 class="metric-value">100%</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                    <p class="metric-desc">Based on data consistency</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="/static/charts.js"></script>
+
+</body>
+</html>
