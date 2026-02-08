@@ -1,0 +1,170 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6ff;
+    padding: 20px;
+}
+
+/* Header */
+.title {
+    text-align: center;
+    color: #5b2eff;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Layout */
+.dashboard {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Base card */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Input panel */
+.input-card {
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Right panel */
+.right-panel {
+    width: 850px;
+    display: none;
+}
+
+/* Prediction card */
+.prediction-card {
+    background: linear-gradient(135deg, #7b2ff7, #f107a3);
+    color: white;
+    text-align: center;
+}
+
+.prediction-card h2 {
+    font-size: 40px;
+}
+
+.small {
+    opacity: 0.9;
+}
+
+.confidence {
+    font-size: 12px;
+}
+
+/* Rows */
+.row {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Mini cards */
+.mini-card {
+    flex: 1;
+    text-align: center;
+}
+
+.green {
+    background: #e9fff1;
+    color: #0a7f42;
+}
+
+/* Charts */
+.chart-card {
+    flex: 1;
+}
+
+/* Recommendation */
+.recommendation {
+    margin-top: 20px;
+    background: #eef4ff;
+}
+
+/* ===== ML MODEL PERFORMANCE METRICS ===== */
+.ml-metrics {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9fafc;
+    border-radius: 16px;
+    display: none;
+}
+
+.ml-metrics-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.ml-metrics-row {
+    display: flex;
+    gap: 20px;
+}
+
+.ml-metric-card {
+    flex: 1;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.metric-label {
+    font-size: 13px;
+    color: #666;
+}
+
+.metric-value {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 6px 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 6px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border-radius: 6px;
+}
+
+.metric-desc {
+    font-size: 12px;
+    color: #666;
+}
